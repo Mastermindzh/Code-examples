@@ -1,7 +1,7 @@
 static String WHITE = "White";
 static String BLACK = "Black";
 static String PAWN = "Pawn";
-
+static String SEPARATOR = " | ";
 
 String [][][] board = {
   { {WHITE, "Rook"}, {BLACK, "Knight"}, {WHITE, "Bishop"}, {BLACK, "Queen"}, {WHITE, "King"}, {BLACK, "Bishop"}, {WHITE, "Knight"}, {BLACK, "Rook"} },
@@ -30,7 +30,9 @@ void setup(){
       print(" - ");
       // print piece
       if(board[row][squareInRow][1] != null){
-        print(board[row][squareInRow][1] + " | ");
+        print(board[row][squareInRow][1] + SEPARATOR);
+      }else{
+        print("Empty" + SEPARATOR);
       }
     }
     // print newline
